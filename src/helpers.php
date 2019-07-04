@@ -7,11 +7,28 @@
  */
 declare(strict_types=1);
 
-namespace {
 
-    use Serafim\Placeholder\Placeholder;
+use Serafim\Symbol\Symbol;
+use Serafim\Placeholder\Placeholder;
 
-    define('PLACEHOLDER', $placeholder = Placeholder::get());
 
-    const _ = PLACEHOLDER;
+//
+// Register a global placeholder definition
+//
+if (! \defined('_')) {
+    \define('_', Symbol::for(Placeholder::class));
 }
+
+
+if (! \function_exists('is_placeholder')) {
+    /**
+     * @param mixed $value
+     * @return bool
+     */
+    function is_placeholder($value): bool
+    {
+        return Placeholder::match($value);
+    }
+}
+
+

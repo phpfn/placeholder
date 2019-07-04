@@ -4,8 +4,58 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90b1cfc18b8959322e4d3858dc4d2cd9",
-    "packages": [],
+    "content-hash": "82d9f16aa2b9a8902b2252658d8c502e",
+    "packages": [
+        {
+            "name": "serafim/symbol",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SerafimArts/Symbol.git",
+                "reference": "fd573f0011236e5785ff2d18fd434a80b67de833"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SerafimArts/Symbol/zipball/fd573f0011236e5785ff2d18fd434a80b67de833",
+                "reference": "fd573f0011236e5785ff2d18fd434a80b67de833",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Serafim\\Symbol\\": "src/"
+                },
+                "files": [
+                    "./src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kirill Nesmeyanov",
+                    "email": "nesk@xakep.ru"
+                }
+            ],
+            "description": "The Symbol type PHP implementation",
+            "homepage": "https://github.com/SerafimArts/Symbol",
+            "keywords": [
+                "functional",
+                "placeholder",
+                "symbol",
+                "type"
+            ],
+            "time": "2019-07-04T18:12:22+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",

@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 namespace Serafim\Placeholder;
 
+use Serafim\Symbol\Symbol;
+
 /**
  * Class Placeholder
  */
@@ -42,17 +44,9 @@ final class Placeholder
      */
     public static function match($value): bool
     {
-        return $value === self::get();
-    }
-
-    /**
-     * @return mixed
-     */
-    public static function get()
-    {
         static $placeholder;
 
-        return $placeholder ?? $placeholder = Symbol::create('_');
+        return $value === ($placeholder ?? $placeholder = Symbol::for(self::class));
     }
 
     /**
