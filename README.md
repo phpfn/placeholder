@@ -3,8 +3,8 @@
 </p>
 <p align="center">
     <a href="https://travis-ci.org/SerafimArts/Placeholder"><img src="https://travis-ci.org/SerafimArts/Placeholder.svg" alt="Travis CI" /></a>
-    <a href="https://codeclimate.com/github/SerafimArts/Placeholder/test_coverage"><img src="https://api.codeclimate.com/v1/badges/43f91ec27407081b8d51/test_coverage" /></a>
-    <a href="https://codeclimate.com/github/SerafimArts/Placeholder/maintainability"><img src="https://api.codeclimate.com/v1/badges/43f91ec27407081b8d51/maintainability" /></a>
+    <a href="https://codeclimate.com/github/SerafimArts/Placeholder/test_coverage"><img src="https://api.codeclimate.com/v1/badges/122f1fac63b6b5a26117/test_coverage" /></a>
+    <a href="https://codeclimate.com/github/SerafimArts/Placeholder/maintainability"><img src="https://api.codeclimate.com/v1/badges/122f1fac63b6b5a26117/maintainability" /></a>
 </p>
 <p align="center">
     <a href="https://packagist.org/packages/serafim/placeholder"><img src="https://img.shields.io/badge/PHP-7.1+-6f4ca5.svg" alt="PHP 7.1+"></a>
