@@ -34,7 +34,7 @@ final class Placeholder
     public static function lazyMap(iterable $items, \Closure $each): \Traversable
     {
         foreach ($items as $key => $value) {
-            yield $key => self::match($value) ? $each($value, $key, $items) : $value;
+            yield self::match($value) ? $each($key, $items) : $value;
         }
     }
 
@@ -51,23 +51,27 @@ final class Placeholder
 
     /**
      * @param iterable $items
+     * @param \Closure|null $filter
      * @return array
      */
-    public static function filter(iterable $items): array
+    public static function filter(iterable $items, \Closure $filter = null): array
     {
-        return \iterator_to_array(self::lazyFilter($items));
+        return \iterator_to_array(self::lazyFilter($items, $filter));
     }
 
     /**
      * @param iterable $items
+     * @param \Closure|null $filter
      * @return \Traversable
      */
-    public static function lazyFilter(iterable $items): \Traversable
+    public static function lazyFilter(iterable $items, \Closure $filter = null): \Traversable
     {
         foreach ($items as $key => $value) {
-            if (! self::match($value)) {
-                yield $key => $value;
+            if (self::match($value) && ($filter === null || $filter($key, $items))) {
+                continue;
             }
+
+            yield $value;
         }
     }
 }
