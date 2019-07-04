@@ -13,7 +13,6 @@
     <a href="https://raw.githubusercontent.com/SerafimArts/Placeholder/master/LICENSE.md"><img src="https://poser.pugx.org/SerafimArts/Placeholder/license" alt="License MIT"></a>
 </p>
 
-
 Library provides a placeholder implementation for currying functions,
 partial applications, pipe operator, and other syntactic structures 
 hat allow specifying default values.
