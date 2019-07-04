@@ -16,7 +16,7 @@ use Serafim\Placeholder\Placeholder;
 // Register a global placeholder definition
 //
 if (! \defined('_')) {
-    \define('_', Symbol::for('_'));
+    \define('_', Symbol::for(Placeholder::class));
 }
 
 
