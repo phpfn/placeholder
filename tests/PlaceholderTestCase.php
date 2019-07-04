@@ -98,4 +98,36 @@ class PlaceholderTestCase extends TestCase
         $this->assertInstanceOf(\Generator::class, $result);
         $this->assertSame([1, _, 2], \iterator_to_array($result));
     }
+
+    /**
+     * @return array
+     */
+    public function typesDataProvider(): array
+    {
+        return [
+            'string'      => ['is_string', false],
+            'null'        => ['is_null', false],
+            'int'         => ['is_int', false],
+            'float'       => ['is_float', false],
+            'bool'        => ['is_bool', false],
+            'array'       => ['is_array', false],
+            'object'      => ['is_object', false],
+            'resource'    => ['is_resource', true],
+            'placeholder' => ['is_placeholder', true],
+            'symbol'      => ['is_symbol', true],
+        ];
+    }
+
+    /**
+     * @dataProvider typesDataProvider
+     *
+     * @param callable $fn
+     * @param bool $eq
+     * @return void
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     */
+    public function testIsPlaceholder(callable $fn, bool $eq): void
+    {
+        $this->assertSame($eq, $fn(_));
+    }
 }
