@@ -8,9 +8,8 @@
 declare(strict_types=1);
 
 
-use Serafim\Symbol\Symbol;
 use Serafim\Placeholder\Placeholder;
-
+use Serafim\Symbol\Symbol;
 
 //
 // Register a global placeholder definition
@@ -30,4 +29,3 @@ if (! \function_exists('is_placeholder')) {
         return Placeholder::match($value);
     }
 }
-
