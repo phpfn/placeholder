@@ -2,7 +2,7 @@
 
 Library provides a placeholder implementation for currying functions,
 partial applications, pipe operator, and other syntactic structures 
-hat allow specifying default values.
+that allow specifying default values.
 
 ## Installation
 
